@@ -9,12 +9,13 @@ cmake -DCMAKE_BUILD_TYPE=Release .. && make
 
 # Return to the root
 cd ../../../
-cd ./libs/curlpp
+# cd ./libs/curlpp
 
 # Run conan to install libcurl
 conan install . --build=missing
 # This is additional command to force gcc V13 >> -s compiler.version=13
-cd ../../build
+# cd ../../build
+cd build
 
 # Build whole project
 cmake -DCMAKE_BUILD_TYPE=Release .. && make
